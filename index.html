@@ -8,6 +8,44 @@
     <title></title>
   </head>
   <body>
+    <div class="container">
+      <div class= jumbotron>
+      <h1>Pizza Parlor</h1>
+      <h2>Choose Toppings:</h2>
+      <ul id= 'rbtn'>
+        <li>
+          <label><input type="radio" name="cheese" value="1"> pepperoni</label>
+        </li>
+        <li>
+          <label><input type="radio" name="mushrooms" value="2"> mushrooms</label>
+        </li>
+        <li>
+          <label><input type="radio" name="pepperoni" value="1"> pepperoni</label>
+        </li>
+        <li>
+          <label><input type="radio" name="anchovy" value="2"> anchovy</label>
+        </li>
+      </ul>
 
+      <h2>Choose Size:</h2>
+      <ul id= 'rbtn'>
+        <li>
+          <input type="radio" name="gender" value="male"> small<br>
+        </li>
+        <li>
+          <input type="radio" name="gender" value="male"> medium<br>
+        </li>
+        <li>
+          <input type="radio" name="gender" value="male"> large<br>
+        </li>
+      </ul>
+      
+      <p><input type="button" value="Get Value"></p>
+      
+      <div id="output" class="alert alert-success"> </div>
+      
+      <p><input type="button" onClick="window.location.reload();"value="refresh page"></p>
+      </div>
+    </div>
   </body>
 </html>
