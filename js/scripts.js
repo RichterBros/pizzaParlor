@@ -68,21 +68,29 @@ $(document).ready(function(){
       pizza.addPrices(price);
       }
     
-      newCopy = pizza.prices;
+     
+        var sum = ''
+        
+        pizza.outPut(sum);
+        
+       
+        
       
+      
+      //pizza.outPut(sum)
       
     
-    var sum = newCopy.reduce(function(a, b){
-      return a + b;
-     }, 0);
+    // var sum = pizza.prices.reduce(function(a, b){
+    //   return a + b;
+    //  }, 0);
  
       
   
-    //console.log(sum)
+    console.log(pizza)
 
     
     //$("#output" ).show();
-     $("#output").html("$" + sum);
+     $("#output").html("$" + pizza.sums);
      $("#output").fadeIn(3000);
     });
   
@@ -95,7 +103,7 @@ function Pizza() {
   this.sizes = [];
   this.toppings = [];
   this.prices = [];
-  
+  this.sums = []
  
 }
  var pizza= new Pizza();
@@ -129,9 +137,15 @@ function Size(size) {
   
   this.size = size;
 }
-Pizza.prototype.outPut = function(){
-  console.log (this.pizza)
-}
+Pizza.prototype.outPut = function(sum){
+   sum = pizza.prices.reduce(function(a, b){
+    return a + b;
+   }, 0);
+   
+  
+  this.sums.push(sum); 
+
+  }
 
 
 
