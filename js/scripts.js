@@ -14,7 +14,7 @@ $(document).ready(function(){
        var topping1 = "pepperoni"
        var topping1 = new Topping(topping1);
        pizza.addToppings(topping1);
-      
+       var price = 1
        var price = new Price(price);
        pizza.addPrices(price);
       
@@ -27,7 +27,9 @@ $(document).ready(function(){
         var topping2 = "mushrooms"
         var topping2 = new Topping(topping2);
         pizza.addToppings(topping2);
-       
+        var price = 1
+        var price = new Price(price);
+        pizza.addPrices(price);
       }
     
     
@@ -48,6 +50,7 @@ $(document).ready(function(){
   // Business Logic for Pizza
 
 function Pizza() {
+  this.size = [];
   this.toppings = [];
   this.prices = [];
 }
@@ -57,7 +60,6 @@ Pizza.prototype.addToppings = function(topping) {
 }
 Pizza.prototype.addPrices = function(price) {
   
-  var price = "5"
   this.prices.push(price);
 }
 
