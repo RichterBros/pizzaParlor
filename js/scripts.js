@@ -3,7 +3,7 @@ $(document).ready(function(){
   $("input[type='button']").click(function(){
     event.preventDefault();
   
-     if (document.getElementById('pepperoni').checked) {
+     giif (document.getElementById('pepperoni').checked) {
       var topping1 = "pepperoni"
       var topping1 = new Topping(topping1);
       pizza.addToppings(topping1);
