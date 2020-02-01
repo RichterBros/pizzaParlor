@@ -4,18 +4,13 @@ $(document).ready(function(){
   $("input[type='button']").click(function(){
     event.preventDefault();
   
-    //var arr = document.getElementById('rbtn').getElementsByTagName('input')
-   
-    
-    
-    //console.log(Pizza.toppings.Topping)
     if  (document.getElementById('pepperoni').checked) {
       
        var topping1 = "pepperoni"
        var topping1 = new Topping(topping1);
        pizza.addToppings(topping1);
        var price = 1
-       //var price = new Price(price);
+      
        pizza.addPrices(price);
       
       }
@@ -28,7 +23,6 @@ $(document).ready(function(){
         var topping2 = new Topping(topping2);
         pizza.addToppings(topping2);
         var price = 1
-        //var price = new Price(price);
         pizza.addPrices(price);
       }
     
@@ -37,7 +31,7 @@ $(document).ready(function(){
         var topping3 = new Topping(topping3);
         pizza.addToppings(topping3);
         var price = 1
-        //var price = new Price(price);
+        
         pizza.addPrices(price);
       }
 
@@ -46,7 +40,7 @@ $(document).ready(function(){
         var topping4 = new Topping(topping4);
         pizza.addToppings(topping4);
         var price = 1
-        //var price = new Price(price);
+      
         pizza.addPrices(price);
       }
 
@@ -55,7 +49,7 @@ $(document).ready(function(){
       var size1 = new Size(size1);
       pizza.addSizes(size1);
       var price = 5
-       // var price = new Price(price);
+       
         pizza.addPrices(price);
      
     }
@@ -64,7 +58,6 @@ $(document).ready(function(){
       var size2 = new Size(size2);
       pizza.addSizes(size2);
       var price = 10
-      //var price = new Price(price);
       pizza.addPrices(price);
     }
     if (document.getElementById('large').checked){
@@ -72,33 +65,27 @@ $(document).ready(function(){
       var size3 = new Size(size3);
       pizza.addSizes(size3);
       var price = 15
-      //var price = new Price(price);
       pizza.addPrices(price);
-      
-      
-    }
-    //for(i=0;i<pizza.prices.length;i++){
+      }
+    
       newCopy = pizza.prices;
-      //var str = newCopy.join(' ');
       
-    //}
-    //[newCopy].reduce((a, b) => a + b, 0)
+      
+    
     var sum = newCopy.reduce(function(a, b){
       return a + b;
-  }, 0);
+     }, 0);
  
-      //var arrPrice = pizza.prices.map(x => x * 2);
+      
   
-    console.log(sum)
-//console.log(pizza.prices)
+    //console.log(sum)
+
     
-    //var sum = pizza.prices.reduce(function(a, b){
-     // return a + b;
-     // }, 0);
-     $("#output").html(sum);
-  // console.log(sum)
+    //$("#output" ).show();
+     $("#output").html("$" + sum);
+     $("#output").fadeIn(3000);
     });
-   //$("#output").html( "you ordered" + " ") 
+  
 });
 
 
